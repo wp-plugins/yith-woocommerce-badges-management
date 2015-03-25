@@ -1,0 +1,1148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Badges Management\n"
+"POT-Creation-Date: 2015-03-25 17:05+0100\n"
+"PO-Revision-Date: 2015-03-25 17:06+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPathExcluded-0: ../plugin-fw\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../class.yith-wcbm-admin.php:127 ../class.yith-wcbm-admin.php:171
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1048
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1196
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1202
+#: ../plugin-fw/lib/yit-plugin-panel.php:62
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: ../class.yith-wcbm-admin.php:180
+msgid "Advanced Options"
+msgstr "Opzioni Avanzate"
+
+#: ../class.yith-wcbm-admin.php:181
+msgid "Category Badges"
+msgstr "Badge di Categoria"
+
+#: ../class.yith-wcbm-admin.php:187 ../class.yith-wcbm-admin.php:188
+msgid "Badges Management"
+msgstr ""
+
+#: ../class.yith-wcbm-admin.php:231
+msgid "Badges"
+msgstr ""
+
+#: ../class.yith-wcbm-admin.php:232
+msgid "Badge"
+msgstr ""
+
+#: ../class.yith-wcbm-admin.php:233
+msgid "Add Badge"
+msgstr "Aggiungi Badge"
+
+#: ../class.yith-wcbm-admin.php:234
+msgid "Add new Badge"
+msgstr "Aggiungi nuovo Badge"
+
+#: ../class.yith-wcbm-admin.php:235
+msgid "Edit Badge"
+msgstr "Modifica Badge"
+
+#: ../class.yith-wcbm-admin.php:236
+msgid "View Badge"
+msgstr "Visualizza Badge"
+
+#: ../class.yith-wcbm-admin.php:237
+msgid "Badge not found"
+msgstr "Badge non trovato"
+
+#: ../class.yith-wcbm-admin.php:238
+msgid "Badge not found in trash"
+msgstr "Badge non trovato nel cestino"
+
+#: ../class.yith-wcbm-admin.php:262
+msgid "Badge Options"
+msgstr "Opzioni Badge"
+
+#: ../class.yith-wcbm-admin.php:319
+msgid "Select Badge"
+msgstr "Seleziona Badge"
+
+#: ../class.yith-wcbm-admin.php:321
+msgid "none"
+msgstr ""
+
+#: ../functions.yith-wcbm.php:34
+msgid "Text"
+msgstr "Testo"
+
+#: ../functions.yith-wcbm.php:38
+msgid "Text Color"
+msgstr "Colore Testo"
+
+#: ../functions.yith-wcbm.php:43
+msgid "Background Color"
+msgstr "Colore Sfondo"
+
+#: ../functions.yith-wcbm.php:48
+msgid "Size [Width x Height] (pixel)"
+msgstr "Dimensione [Larghezza x Altezza] (pixel)"
+
+#: ../functions.yith-wcbm.php:66
+msgid "Position"
+msgstr "Posizione"
+
+#: ../functions.yith-wcbm.php:68
+msgid "top-left"
+msgstr ""
+
+#: ../functions.yith-wcbm.php:69
+msgid "top-right"
+msgstr ""
+
+#: ../functions.yith-wcbm.php:70
+msgid "bottom-left"
+msgstr ""
+
+#: ../functions.yith-wcbm.php:71
+msgid "bottom-right"
+msgstr ""
+
+#: ../functions.yith-wcbm.php:91
+msgid "Preview"
+msgstr "Anteprima"
+
+#: ../init.php:43
+msgid ""
+"YITH WooCommerce Badges Management is enabled but not effective. It requires "
+"Woocommerce in order to work."
+msgstr ""
+"YITH WooCommerce Badges Management è abilitato, ma non utilizzabile. "
+"Necessita di Woocommerce per funzionare."
+
+#: ../init.php:52
+msgid ""
+"You can't activate the free version of YITH WooCommerce Badges Management "
+"while you are using the premium one."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:460
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:574
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:719
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1632
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:461
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:575
+#, fuzzy, php-format
+msgid "Add New %s"
+msgstr "Aggiungi nuovo Badge"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:462
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:576
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1267
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1304
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:463
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:577
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:464
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:578
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:465
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:579
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1251
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1305
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:466
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:580
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:467
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:581
+#, php-format
+msgid "No %s found"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:468
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:582
+#, fuzzy, php-format
+msgid "No %s found in Trash"
+msgstr "Badge non trovato nel cestino"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:627
+msgid "Search Categories"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:628
+#, fuzzy
+msgid "All Categories"
+msgstr "Badge di Categoria"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:629
+msgid "Parent Category"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:630
+msgid "Parent Category:"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:631
+#, fuzzy
+msgid "Edit Category"
+msgstr "Modifica Badge"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:632
+msgid "Update Category"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:633
+#, fuzzy
+msgid "Add New Category"
+msgstr "Aggiungi nuovo Badge"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:634
+#, fuzzy
+msgid "New Category Name"
+msgstr "Badge di Categoria"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:635
+#, fuzzy
+msgid "Category"
+msgstr "Badge di Categoria"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:724
+#, fuzzy
+msgid "Categories"
+msgstr "Badge di Categoria"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1042
+#, fuzzy, php-format
+msgid "%s Settings"
+msgstr "Impostazioni"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1051
+msgid "Type"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1052
+msgid "Layout for this "
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1058
+msgid "Rewrite"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1059
+msgid ""
+"Univocal identification name in the URL for each product (slug from post if "
+"empty)"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1064
+msgid "Label in Singular"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1065
+msgid "Set a label in singular (title of portfolio if empty)"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1070
+msgid "Label in Plural"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1071
+msgid "Set a label in plural (title of portfolio if empty)"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1076
+msgid "Taxonomy"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1077
+msgid ""
+"If you want to use categories in the portfolio, set a name for taxonomy. "
+"Name should be a slug (must not contain capital letters nor spaces) and must "
+"not be more than 32 characters long (database structure restriction)."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1082
+msgid "Taxonomy Rewrite"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1083
+msgid "Set univocal name for each category page URL."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1088
+#, fuzzy
+msgid "Single layout"
+msgstr "Prodotto Singolo"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1089
+msgid "Layout for single page of this portfolio"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1130
+#, fuzzy
+msgid "layout settings"
+msgstr "Impostazioni"
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1222
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1235
+msgid "Quick links"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1475
+#, php-format
+msgid "Show frontend of the %s"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1482
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:46
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:90
+msgid "Name"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1631
+#, php-format
+msgid "Add %s from images"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-cpt-unlimited.php:1633
+msgid "Add with multiupload"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel-wc.php:295
+msgid "The changes you have made will be lost if you leave this page."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:61
+#, fuzzy
+msgid "Plugin Settings"
+msgstr "Impostazioni"
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:91
+#: ../plugin-fw/lib/yit-plugin-subpanel.php:101
+msgid "YIT Plugins"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:280
+#: ../plugin-fw/lib/yit-plugin-subpanel.php:142
+#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:5
+msgid "Save Changes"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:283
+#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:8
+msgid ""
+"If you continue with this action, you will reset all options in this page."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:285
+#: ../plugin-fw/lib/yit-plugin-subpanel.php:147
+msgid "Reset to Default"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:285
+#: ../plugin-fw/lib/yit-plugin-subpanel.php:147
+#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
+msgid "Are you sure?"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:419
+msgid ""
+"The element you have entered already exists. Please, enter another name."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:420
+#, fuzzy
+msgid "Settings saved"
+msgstr "Impostazioni"
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:421
+#, fuzzy
+msgid "Settings reset"
+msgstr "Impostazioni"
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:422
+msgid "Element deleted correctly."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:423
+#: ../plugin-fw/lib/yit-plugin-panel.php:424
+msgid "Element updated correctly."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:425
+msgid "Database imported correctly."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:426
+msgid "An error has occurred during import. Please try again."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:427
+msgid "The added file is not valid."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:428
+msgid "Sorry, import is disabled."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-panel.php:429
+msgid "Sorting successful."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-subpanel.php:145
+msgid ""
+"If you continue with this action, you will reset all the options in this "
+"page."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-pointers.php:70
+msgid "Plugins Activated"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-pointers.php:71
+msgid ""
+"From now on, you can find all plugin options in YIT Plugin menu.\n"
+"                                     For each plugin installed, "
+"customization settings will be available as a new entry in YIT Plugin menu."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-pointers.php:73 ../plugin-fw/lib/yit-pointers.php:89
+msgid "Discover all our plugins available on:"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-pointers.php:74 ../plugin-fw/lib/yit-pointers.php:90
+msgid "and"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-pointers.php:84
+msgid "Plugins Upgraded"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-pointers.php:85
+msgid ""
+"From now on, you can find all options of your plugins in YIT Plugin menu.\n"
+"                                    Any time one of our plugins is updated, "
+"a new entry will be added to this menu.\n"
+"                                    For example, after the update, plugin "
+"options (such as for YITH WooCommerce Wishlist, YITH WooCommerce Ajax "
+"Search, etc.)\n"
+"                                    will be moved from previous location to "
+"YIT Plugin tab."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:119
+msgid "There is a new version of %plugin_name% available."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:120
+msgid "View version %latest% details."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:121
+msgid "Automatic update is unavailable for this plugin,"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:122
+msgid ""
+"please <a href=\"%activate_link%\">activate</a> your copy of %plugin_name%."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:123
+msgid "Update now."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:226
+msgid "Yithemes Repository"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:260
+msgid "Invalid URL Provided."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:273
+msgid "Could not create Temporary file."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:414
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
+"yit-changelog-button\" title=\"%3$s\">View version %4$s details</a>."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:416
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
+"yit-changelog-button\" title=\"%3$s\">View version %4$s details</a>. <em>You "
+"have to activate the plugin on a single site of the network to benefit from "
+"automatic updates.</em>"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:418
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
+"yit-changelog-button\" title=\"%3$s\">View version %4$s details</a>. "
+"<em>Automatic update is unavailable for this plugin, please <a href=\"%5$s\" "
+"title=\"Licence activation\">activate</a> your copy of %6s.</em>"
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:420
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
+"yit-changelog-button\" title=\"%3$s\">View version %4$s details</a> or <a "
+"href=\"%5$s\">update now</a>."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:493
+msgid "You can't update the plugins for this site."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:497
+msgid ""
+"You do not have sufficient permissions to update the plugins for this site."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-upgrade.php:504
+msgid "Update Plugin"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:156
+#, php-format
+msgid "%field% field cannot be empty"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:157
+msgid "%field_1% and %field_2% fields cannot be empty"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:158
+msgid "Unable to contact the remote server, please try again later. Thanks!"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:537
+msgid "Invalid Request"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:538
+msgid "Invalid licence key"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:539
+msgid "Software has been deactivated"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:540
+msgid "Maximum number of activations exceeded"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:541
+msgid "Invalid instance ID"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:542
+msgid "Invalid security key"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:543
+msgid "Licence key has expired"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-licence.php:544
+msgid "Licence key has been banned"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-plugin-licence.php:63
+#: ../plugin-fw/licence/lib/yit-plugin-licence.php:64
+#: ../plugin-fw/licence/lib/yit-theme-licence.php:63
+#: ../plugin-fw/licence/lib/yit-theme-licence.php:64
+#: ../plugin-fw/licence/lib/yit-theme-licence.php:106
+#: ../plugin-fw/licence/lib/yit-theme-licence.php:107
+msgid "Licence Activation"
+msgstr ""
+
+#: ../plugin-fw/licence/lib/yit-theme-licence.php:114
+#: ../plugin-fw/licence/lib/yit-theme-licence.php:115
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:19
+msgid "Yithemes Licence Activation"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:23
+msgid ""
+"Have you updated your licenses? Have you asked for an extension? Update "
+"information concerning your products."
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:25
+msgid "Update licence information"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:35
+msgid "Products to be activated"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:54
+msgid "Activate"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:73
+msgid "Activated"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:77
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:109
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:133
+msgid "Product Name"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:78
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:110
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:134
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:145
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:337
+msgid "Email"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:79
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:111
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:135
+msgid "Licence Key"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:80
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:136
+msgid "Expires"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:81
+msgid "Remaining"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:82
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:95
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:137
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:147
+msgid "Renew"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:93
+#, php-format
+msgid "%1s out of %2s"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:105
+msgid "Banned"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:129
+msgid "Expired"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/ajax-products.php:23
+#, fuzzy
+msgid "Search for a product"
+msgstr "Seleziona il Badge per i prodotti in evidenza."
+
+#: ../plugin-fw/templates/metaboxes/types/categories.php:36
+msgid "No categories."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/categories.php:42
+msgid "+ Add New Category"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:5
+msgid "Text Input"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:6
+msgid "Checkbox"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:7
+#, fuzzy
+msgid "Select"
+msgstr "Seleziona Badge"
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:8
+#, fuzzy
+msgid "Textarea"
+msgstr "Testo"
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:9
+msgid "Radio Input"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:10
+msgid "Password Field"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:11
+msgid "File Upload"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:45
+msgid "Theme Icon"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:46
+msgid "Custom Icon"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:47
+#: ../plugin-fw/templates/metaboxes/types/responsivesliders.php:24
+msgid "None"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:57
+msgid "Add field"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:66
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:258
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:37
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:82
+msgid "Remove"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:67
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:259
+msgid "Click to toggle"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:74
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:266
+msgid "Title Field"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:78
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:270
+msgid "Insert the title for the field."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:83
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:275
+msgid "Data Name"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:87
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:279
+msgid ""
+"REQUIRED: Field identification name to be entered into email body. "
+"<strong>Note:</strong>Use only lowercase characters and underscores."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:92
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:284
+msgid "Type field"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:100
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:292
+#, fuzzy
+msgid "Select the type for this field."
+msgstr "Seleziona il Badge per i prodotti in offerta."
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:105
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:297
+msgid "Checked"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:109
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:301
+msgid "Select this option if you want this field appears as already checked."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:114
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:306
+#, fuzzy
+msgid "Add options "
+msgstr "Opzioni Avanzate"
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:115
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:307
+#, fuzzy
+msgid "Add option"
+msgstr "Opzioni Avanzate"
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:118
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:310
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:432
+#, fuzzy
+msgid "Selected"
+msgstr "Seleziona Badge"
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:121
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:313
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:432
+msgid "Delete option"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:127
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:319
+msgid "Error Message"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:131
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:323
+msgid "Insert the error message for validation."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:136
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:328
+msgid "Required"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:140
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:332
+msgid "Select this option if it must be required."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:149
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:341
+msgid "Select this option if the email must be valid."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:154
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:346
+msgid "Reply To"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:158
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:350
+msgid "Select this if it is the email you can reply to."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:163
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:355
+msgid "Class"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:167
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:359
+msgid ""
+"Insert additional class(es) (separated by commas) for more personalization."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:172
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:364
+msgid "Icon"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:200
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:388
+#: ../plugin-fw/templates/metaboxes/types/icon-list.php:69
+#: ../plugin-fw/templates/metaboxes/types/select-icon.php:33
+#: ../plugin-fw/templates/metaboxes/types/upload.php:21
+#: ../plugin-fw/templates/panel/types/upload.php:31
+#: ../plugin-fw/templates/panel/woocommerce/woocommerce-upload.php:35
+msgid "Upload"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:206
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:394
+#: ../plugin-fw/templates/metaboxes/types/icon-list.php:75
+#: ../plugin-fw/templates/metaboxes/types/select-icon.php:39
+#, fuzzy
+msgid "Image preview"
+msgstr "Anteprima"
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:214
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:402
+msgid "Insert an icon for more personalization."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:219
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:406
+msgid "Width"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:244
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:418
+msgid "Set field length."
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:28
+msgid "Close all"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:28
+msgid "Expand all"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:52
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:95
+msgid "Value"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:53
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:96
+msgid "Content of the tab. (HTML is supported)"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:65
+msgid "Add custom product tab"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/customtabs.php:107
+msgid "Do you want to remove the custom tab?"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/icon-list.php:89
+#, php-format
+msgid "(Default: %s <img src=\"%s\"/>)"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/icon-list.php:91
+#, php-format
+msgid "(Default: <i %s></i> )"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:35
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#: ../plugin-fw/templates/metaboxes/types/images.php:33
+#: ../plugin-fw/templates/metaboxes/types/images.php:59
+msgid "Delete image"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+msgid "Add Images to Gallery"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+msgid "Add to gallery"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#, fuzzy
+msgid "Add images"
+msgstr "Aggiungi Badge"
+
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+msgid "Delete"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/images.php:37
+#, fuzzy
+msgid "Upload new images"
+msgstr "Upload Immagine Personalizzata"
+
+#: ../plugin-fw/templates/metaboxes/types/images.php:70
+msgid "Are you sure you want to remove this image?"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:25
+#: ../plugin-fw/templates/metaboxes/types/sidebars.php:36
+msgid "Left sidebar"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:28
+#: ../plugin-fw/templates/metaboxes/types/sidebars.php:42
+#: ../plugin-fw/templates/metaboxes/types/sidebars.php:45
+msgid "No sidebar"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:31
+#: ../plugin-fw/templates/metaboxes/types/sidebars.php:39
+msgid "Right sidebar"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:34
+#: ../plugin-fw/templates/metaboxes/types/sidebars.php:53
+#: ../plugin-fw/templates/metaboxes/types/sidebars.php:64
+msgid "Choose a sidebar"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/sidebars.php:51
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/sidebars.php:62
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:42
+msgid "px"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:43
+msgid "em"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:44
+msgid "pt"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:45
+msgid "rem"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:59
+#: ../plugin-fw/templates/metaboxes/types/typography.php:153
+#: ../plugin-fw/templates/metaboxes/types/typography.php:217
+msgid "Web fonts"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:71
+msgid "Google fonts"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:96
+msgid "Regular"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:97
+msgid "Bold"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:98
+msgid "Extra bold"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:99
+msgid "Italic"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/typography.php:100
+msgid "Italic bold"
+msgstr ""
+
+#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
+msgid "Reset Defaults"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:8
+msgid "General Options"
+msgstr "Opzioni Generali"
+
+#: ../plugin-options/settings-options.php:16
+msgid "Hide on sale badge"
+msgstr "Nascondi badge in offerta"
+
+#~ msgid "Plugin Documentation"
+#~ msgstr "Documentazione Plugin"
+
+#~ msgid "Premium Version"
+#~ msgstr "Versione Premium"
+
+#~ msgid "Line Height (pixel) [set -1 to set it equal to height of the badge]"
+#~ msgstr ""
+#~ "Line Height (pixel) [inserisci -1 per impostarlo uguale all'altezza del "
+#~ "badge]"
+
+#~ msgid "Position (pixel or percentual)"
+#~ msgstr "Posizione (pixel o percentuali)"
+
+#~ msgid "Anchor Point [for Drag and Drop Positioning]"
+#~ msgstr "Punto di ancoraggio [per il posizionamento tramite Drag and Drop]"
+
+#~ msgid "Opacity [0:transparent | 100:opaque]"
+#~ msgstr "Opacità [0:transparente | 100:opaco]"
+
+#~ msgid "Recent Products"
+#~ msgstr "Prodotti Recenti"
+
+#~ msgid "Recent products Badge"
+#~ msgstr "Badge per Prodotti Recenti"
+
+#~ msgid "Select the Badge for all recent products."
+#~ msgstr "Seleziona il Badge da usare per tutti i prodotti recenti."
+
+#~ msgid "Newer than"
+#~ msgstr "Nuovi da"
+
+#~ msgid "Show the badge for products newer than X days."
+#~ msgstr "Visualizza il badge per i prodotti recenti da X giorni."
+
+#~ msgid "On Sale [Automatic]"
+#~ msgstr "In offerta [Automatico]"
+
+#~ msgid "On sale Badge"
+#~ msgstr "Badge In Offerta"
+
+#~ msgid "Advanced on sale Badge"
+#~ msgstr "Badge in offerta Avanzati"
+
+#~ msgid "Select the Advanced on sale Badge for products on sale."
+#~ msgstr "Seleziona il Badge Avanzato per i prodotti in offerta."
+
+#~ msgid "Green Arrow Right"
+#~ msgstr "Freccia Verde Destra"
+
+#~ msgid "Balloon"
+#~ msgstr "Fumetto"
+
+#~ msgid "Squared Balloon"
+#~ msgstr "Fumetto quadrato"
+
+#~ msgid "Ribbon"
+#~ msgstr "Nastro"
+
+#~ msgid "Pink Round Pop"
+#~ msgstr "Pop arrotondato Rosa"
+
+#~ msgid "Arrow Down"
+#~ msgstr "Freccia verso il basso"
+
+#~ msgid "Alternative Bookmark"
+#~ msgstr "Segnalibro alternativo"
+
+#~ msgid "Bookmark"
+#~ msgstr "Segnalibro"
+
+#~ msgid "Sale Bookmark"
+#~ msgstr "Segnalibro offerta"
+
+#~ msgid "Circle"
+#~ msgstr "Circolare"
+
+#~ msgid "Featured [Automatic]"
+#~ msgstr "In evidenza [Automatico]"
+
+#~ msgid "Featured Badge"
+#~ msgstr "Badge in evidenza"
+
+#~ msgid "Hide on Single Product"
+#~ msgstr "Nascondi nel prodotto singolo"
+
+#~ msgid "Select to hide badges on Single Product Page."
+#~ msgstr "Seleziona per nascondere i badge nella Pagina del singolo prodotto"
+
+#~ msgid "Select the Badge for all products of category: %s"
+#~ msgstr "Seleziona il Badge per tutti i prodotti della categoria: %s"
