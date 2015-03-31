@@ -1,14 +1,14 @@
-=== YITH WooCommerce Badges Management ===
+=== YITH WooCommerce Badge Management ===
 
 Contributors: yithemes
-Tags: badges, badge, woocommerce, products, themes, yit, e-commerce, shop, yith, badges management, premium, yithemes
+Tags: badges, badge, woocommerce, products, themes, yit, e-commerce, shop, yith, badge management, premium, yithemes
 Requires at least: 3.5.1
 Tested up to: 4.1.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-YITH WooCommerce Badges Management allows you to create and manage custom badges for products.
+YITH WooCommerce Badge Management allows you to create and manage custom badges for products.
 
 
 == Description ==
@@ -25,9 +25,9 @@ Make your website more attractive with badges inviting customers to buy. It is n
 
 1. Unzip the downloaded zip file.
 2. Upload the plugin folder into the `wp-content/plugins/` directory of your WordPress site.
-3. Activate `YITH WooCommerce Badges Management` from Plugins page
+3. Activate `YITH WooCommerce Badge Management` from Plugins page
 
-YITH WooCommerce Badges Management will add a new submenu called "Badges Management" under "YIT Plugins" menu. Here you are able to configure all the plugin settings.
+YITH WooCommerce Badge Management will add a new submenu called "Badge Management" under "YIT Plugins" menu. Here you are able to configure all the plugin settings.
 
 
 == Screenshots ==
@@ -50,7 +50,7 @@ YITH WooCommerce Badges Management will add a new submenu called "Badges Managem
 
 == Suggestions ==
 
-If you have suggestions about how to improve YITH WooCommerce Badges Management, you can [write us](mailto:plugins@yithemes.com "Your Inspiration Themes") so we can bundle them into YITH WooCommerce Badges Management.
+If you have suggestions about how to improve YITH WooCommerce Badge Management, you can [write us](mailto:plugins@yithemes.com "Your Inspiration Themes") so we can bundle them into YITH WooCommerce Badge Management.
 
 == Translators ==
 
@@ -58,7 +58,7 @@ If you have suggestions about how to improve YITH WooCommerce Badges Management,
 * English (Default)
 
 If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
-[use](http://yithemes.com/contact "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Badges Management Languages
+[use](http://yithemes.com/contact "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Badge Management Languages
 
 == Upgrade notice ==
 
