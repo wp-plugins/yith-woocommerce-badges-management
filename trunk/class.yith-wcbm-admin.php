@@ -67,7 +67,7 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
          * @access public
          * @since 1.0.0
          */
-        public $doc_url = 'http://yithemes.com/docs-plugins/yith-woocommerce-badge-management/';
+        public $doc_url = 'http://yithemes.com/docs-plugins/yith-woocommerce-badges-management/';
 
         /**
          * Returns single instance of the class
