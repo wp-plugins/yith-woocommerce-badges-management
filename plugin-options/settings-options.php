@@ -13,8 +13,9 @@ $settings = array(
 
 		'hide-on-sale-default-badge' => array(
 			'id'        => 'yith-wcbm-hide-on-sale-default',
-			'name'      => __( 'Hide on sale badge', 'yith-wcbm' ),
+			'name'      => __( 'Hide "On sale" badge', 'yith-wcbm' ),
 			'type'      => 'checkbox',
+			'desc'      => __( 'Select to hide the default Woocommerce "On sale" badge.', 'yith-wcbm' ),
 			'default'   => 'no'
 		),
 

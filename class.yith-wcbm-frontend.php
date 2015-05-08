@@ -3,7 +3,7 @@
  * Frontend class
  *
  * @author Yithemes
- * @package YITH WooCommerce Badges Management
+ * @package YITH WooCommerce Badge Management
  * @version 1.1.1
  */
 
@@ -36,6 +36,9 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
          */
         public $version = YITH_WCBM_VERSION;
 
+
+        public $this_is_product = NULL;
+
         /**
          * Returns single instance of the class
          *
@@ -60,17 +63,31 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
             
             // Action to add custom badge in single product page
             add_filter('woocommerce_single_product_image_html',array( $this, 'show_badge_on_product' ));
-            // Action to add custom badge in shop page
-            remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail');
-            add_action('woocommerce_before_shop_loop_item_title', array($this, 'show_badge_on_thumbnail'));
-
+            
             // add frontend css
             add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
 
             // edit sale flash badge
             add_filter('woocommerce_sale_flash', array($this, 'sale_flash'));
 
+            // POST Thumbnail [to add custom badge in shop page]
+            add_filter('post_thumbnail_html', array($this, 'add_box_thumb'));
+            add_action('woocommerce_before_shop_loop_item_title', array($this, 'add_variable_prod'));
+
        }
+
+        public function add_box_thumb( $thumb ){
+            if(isset($this->this_is_product)){
+                return self::show_badge_on_product($thumb);
+                unset($this->this_is_product);
+            }else{
+                return $thumb;
+            }
+        }
+
+        public function add_variable_prod(){
+            $this->this_is_product = 1;
+        }
 
         /**
          * Hide or show default sale flash badge
@@ -93,18 +110,6 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
                 return '';
             }
             return $val;
-        }
-
-        /**
-         * Edit thumbnails in shop page
-         *
-         * @access public
-         * @return void
-         * @since  1.0.0
-         * @author Leanza Francesco <leanzafrancesco@gmail.com>
-         */
-        public function show_badge_on_thumbnail() {
-            echo self::show_badge_on_product(woocommerce_get_product_thumbnail());
         }
 
         /**
@@ -135,7 +140,8 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
 
         }
         public function enqueue_scripts(){
-            wp_enqueue_style( 'yith_wcbm_badge_style', YITH_WCBM_ASSETS_URL . '/css/yith_wcbm_frontend.css');
+            wp_enqueue_style( 'yith_wcbm_badge_style', YITH_WCBM_ASSETS_URL . '/css/frontend.css');
+            wp_enqueue_style('googleFontsOpenSans', 'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300');
         }
     }
 }

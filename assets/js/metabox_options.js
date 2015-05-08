@@ -1,39 +1,56 @@
 jQuery(function($){
 
-    var type = $( '#yith-wcbm-badge-type').data( 'type' ),
-        preview_render = function() {
-        var preview_badge = $('#preview-badge');
-        if ( type == 'custom' ){
-           preview_badge.html($("#yith-wcbm-text").val());
-           preview_badge.css({
-                "color":                        $("#yith-wcbm-txt-color").val(),
-                "background-color":             $("#yith-wcbm-bg-color").val(),
-                "width":                        $("#yith-wcbm-width").val() + "px",
-                "height":                       $("#yith-wcbm-height").val() + "px",
-                "line-height":                  $("#yith-wcbm-height").val() + "px"
-           });
+    var type                        = $( '#yith-wcbm-badge-type').data( 'type' ),
+        tab_container               = $(".tab-container"),
+        preview_badge               = $('#preview-badge'),
+        btn_text                    = $('#btn-text'),
+        btn_image                   = $('#btn-image'),
+        half_left                   = $(".half-left"),
+        half_right                  = $(".half-right"),
+        url_for_images              = $('#yith-wcbm-url-for-images').val(),
+        flag                        = 0,
+        correct_height              = function(){
+            half_left.removeAttr("style");
+            half_right.removeAttr("style");
+            half_left.css({'min-height' : '450px'});
+            if ( half_right.height() > half_left.height()){
+                half_left.height(half_right.height());
+            }else{
+                half_right.height(half_left.height());
+            }
+        },
+        preview_render              = function() {
+            if ( type != 'image' ){
+               preview_badge.html($("#yith-wcbm-text").val());
+               preview_badge.css({
+                    "color":                        $("#yith-wcbm-txt-color").val(),
+                    "background-color":             $("#yith-wcbm-bg-color").val(),
+                    "width":                        $("#yith-wcbm-width").val() + "px",
+                    "height":                       $("#yith-wcbm-height").val() + "px",
+                    "line-height":                  $("#yith-wcbm-height").val() + "px"
+               });
 
-        }else{
-           preview_badge.removeAttr("style");
-           var image_badge = $("#yith-wcbm-image-url").val();
-           preview_badge.html('<img src="' + image_badge + '" />');
-        }
-   
-        var position = $("#yith-wcbm-position").val();
-        switch(position){
-            case 'top-right':
-                preview_badge.css({'top': '0', 'bottom': 'auto', 'left': 'auto', 'right': '0'});
-                break;
-            case 'bottom-left':
-                preview_badge.css({'top': 'auto', 'bottom': '0', 'left': '0', 'right': 'auto'});
-                break;
-            case 'bottom-right':
-                preview_badge.css({'top': 'auto', 'bottom': '0', 'left': 'auto', 'right': '0'});
-                break;
-            default:
-                preview_badge.css({'top': '0', 'bottom': 'auto', 'left': '0', 'right': 'auto'});
-        }
-    }
+            }else{
+               preview_badge.removeAttr("style");
+               var image_badge = $("#yith-wcbm-image-url").val();
+               preview_badge.html('<img src="' + url_for_images + image_badge + '" />');
+            }
+       
+            var position = $("#yith-wcbm-position").val();
+            switch(position){
+                case 'top-right':
+                    preview_badge.css({'top': '0', 'bottom': 'auto', 'left': 'auto', 'right': '0'});
+                    break;
+                case 'bottom-left':
+                    preview_badge.css({'top': 'auto', 'bottom': '0', 'left': '0', 'right': 'auto'});
+                    break;
+                case 'bottom-right':
+                    preview_badge.css({'top': 'auto', 'bottom': '0', 'left': 'auto', 'right': '0'});
+                    break;
+                default:
+                    preview_badge.css({'top': '0', 'bottom': 'auto', 'left': '0', 'right': 'auto'});
+            }
+        };
 
     preview_render();
     $("input.update-preview").on("change paste keyup input focus", function() {
@@ -45,48 +62,36 @@ jQuery(function($){
     $('.yith-wcbm-color-picker').wpColorPicker({
         change: preview_render
     });
+    $('.iris-palette').on('click', function(){
+        setTimeout(preview_render,1); 
+    });
 
     /*** Button Control ***/
-    var custom_btn = $('#yith-wcbm-custom-button'),
-        image_btn = $('#yith-wcbm-image-button'),
-        selected_class = 'yith-wcbm-button-selected',
-        panel_custom = $('#yith-wcbm-panel-custom'),
-        panel_image = $('#yith-wcbm-panel-image'),
+    var selected_class = 'yith-wcbm-button-selected',
         input_type = $("#yith-wcbm-badge-type"),
         input_image_url = $("#yith-wcbm-image-url"),
-        button_select_image = $(".yith-wcbm-select-image-btn"),
-        button_reset = function(){
-            custom_btn.removeClass( selected_class );
-            image_btn.removeClass( selected_class );
-        };
+        button_select_image = $(".yith-wcbm-select-image-btn");
 
-    if(type == 'custom'){
-        custom_btn.addClass( selected_class );
-        panel_image.hide();
-    }else{
-        image_btn.addClass( selected_class );
-        panel_custom.hide();
-    }
-
-    custom_btn.on( 'click', function(){
-        button_reset;
-        custom_btn.addClass( selected_class );
-        panel_image.fadeOut(0);
-        panel_custom.fadeIn();
-        input_type.val('custom');
-        type = 'custom';
+    btn_text.on('click', function(){
+        input_type.val('text');
+        type = 'text';
+        correct_height();
         preview_render();
     });
-
-    image_btn.on( 'click', function(){
-        button_reset;
-        image_btn.addClass( selected_class );
-        panel_custom.fadeOut(0);
-        panel_image.fadeIn();
+    btn_image.on('click', function(){
         input_type.val('image');
         type = 'image';
+        correct_height();
         preview_render();
     });
+
+    tab_container.tabs();
+    switch(type){
+        case 'image':
+            tab_container.tabs('option', 'active', 1);
+            break;
+        default:
+    }
 
     button_select_image.on( 'click', function(e){
         var badge_image_url = $(this).attr('badge_image_url');
@@ -100,7 +105,15 @@ jQuery(function($){
     button_select_image.each(function(){
         if ($(this).attr('badge_image_url') == input_image_url.val()){
             $(this).addClass("yith-wcbm-select-image-btn-selected");
+            flag = 1;
         }
     });
+    if (flag == 0 && input_image_url.val().length == 0){
+        button_select_image.first().trigger('click');
+    }
+    correct_height();
+
+    // Hide the "view badge" button
+    $('#view-post-btn').hide();
 
 });

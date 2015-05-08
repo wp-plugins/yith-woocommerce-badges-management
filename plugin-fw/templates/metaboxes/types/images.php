@@ -27,14 +27,19 @@ if ( empty( $value ) || ! is_array( $value ) )
     <?php if ( ! empty( $value ) ) : foreach ( $value as $image_id ) : ?>
     <li>
         <a href="#">
-            <?php yit_image( "id=$image_id&size=admin-post-type-thumbnails" );//echo wp_get_attachment_image( $image_id, 'admin-post-type-thumbnails' ); ?> 
+            <?php
+            if( function_exists( 'yit_image' ) ) :
+                yit_image( "id=$image_id&size=admin-post-type-thumbnails" );
+            else:
+                echo wp_get_attachment_image( $image_id, array( 80, 80 ) );
+            endif; ?>
             <input type="hidden" name="<?php echo $name ?>[]" value="<?php echo esc_attr( $image_id ) ?>" />
         </a>
-        <a href="#" title="<?php _e( 'Delete image', 'yit' ) ?>" class="delete">X</a>
+        <a href="#" title="<?php _e( 'Delete image', 'yith-plugin-fw' ) ?>" class="delete">X</a>
     </li>   
     <?php endforeach; endif; ?>
 </ul>         
-<a href="#" class="button-secondary upload-extra-images" id="<?php echo $id ?>-upload-extra-images"><?php _e( 'Upload new images', 'yit' ) ?></a>    
+<a href="#" class="button-secondary upload-extra-images" id="<?php echo $id ?>-upload-extra-images"><?php _e( 'Upload new images', 'yith-plugin-fw' ) ?></a>    
 </div>
 <script type="text/javascript">
     jQuery(document).ready(function($){
@@ -56,7 +61,7 @@ if ( empty( $value ) || ! is_array( $value ) )
                     var baseurl = imgurl.replace( '.' + thumburl[0], '' );
                     thumburl = baseurl + '-140x100.' + thumburl[0];
 
-                    $('#<?php echo $id ?>-extra-images.slides-wrapper').append('<li><a href="#"><img src="'+thumburl+'" width="140" height="100" /> <input type="hidden" name="<?php echo $name ?>[]" value="'+image_id+'" /></a><a href="#" title="<?php echo addslashes( __( 'Delete image', 'yit' ) ) ?>" class="delete">X</a></li>');
+                    $('#<?php echo $id ?>-extra-images.slides-wrapper').append('<li><a href="#"><img src="'+thumburl+'" width="140" height="100" /> <input type="hidden" name="<?php echo $name ?>[]" value="'+image_id+'" /></a><a href="#" title="<?php echo addslashes( __( 'Delete image', 'yith-plugin-fw' ) ) ?>" class="delete">X</a></li>');
                 });
             	
             	tb_remove();
@@ -67,7 +72,7 @@ if ( empty( $value ) || ! is_array( $value ) )
         });    
         
         $('#<?php echo $id ?>-extra-images a.delete').on( 'click', function(){ 
-            if ( confirm( "<?php _e( 'Are you sure you want to remove this image?', 'yit' ) ?>" ) ) {
+            if ( confirm( "<?php _e( 'Are you sure you want to remove this image?', 'yith-plugin-fw' ) ?>" ) ) {
                 $(this).parent().remove();    
             }
             

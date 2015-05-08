@@ -14,7 +14,7 @@ if ($position == 'top-left'){
     .yith-wcbm-badge-<?php echo $product_id ?>-<?php echo $id_badge ?>{
 
 <?php
-    if ($type == 'custom') {
+    if ($type == 'text') {
     ?>
     color: <?php echo $txt_color?>; 
     background-color: <?php echo $bg_color ?>; 
@@ -24,6 +24,7 @@ if ($position == 'top-left'){
 <?php
 }else{
     // IMAGE BADGE
+    $image_url = YITH_WCBM_ASSETS_URL . '/images/' . $image_url;
     $text = '<img src="'. $image_url . '" />';
 }
 ?>

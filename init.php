@@ -1,8 +1,8 @@
 <?php
 /**
-* Plugin Name: YITH WooCommerce Badges Management
+* Plugin Name: YITH WooCommerce Badge Management
 * Plugin URI: http://yithemes.com/
-* Description: YITH WooCommerce Badges Management allows you to create custom badge for every product.
+* Description: YITH WooCommerce Badge Management allows you to create custom badge for every product.
 * Version: 1.0.0
 * Author: YIThemes
 * Author URI: http://yithemes.com/
@@ -10,7 +10,7 @@
 * Domain Path: /languages/
 *
 * @author Yithemes
-* @package YITH WooCommerce Badges Management
+* @package YITH WooCommerce Badge Management
 * @version 1.0.0
 */
 /*  Copyright 2015  Your Inspiration Themes  (email : plugins@yithemes.com)
@@ -31,7 +31,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 /* == COMMENT == */ 
 
-if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
 if ( ! function_exists( 'is_plugin_active' ) ) {
     require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -40,7 +40,7 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
 function yith_wcbm_install_woocommerce_admin_notice() {
     ?>
     <div class="error">
-        <p><?php _e( 'YITH WooCommerce Badges Management is enabled but not effective. It requires Woocommerce in order to work.', 'yit' ); ?></p>
+        <p><?php _e( 'YITH WooCommerce Badge Management is enabled but not effective. It requires Woocommerce in order to work.', 'yit' ); ?></p>
     </div>
     <?php
 }
@@ -49,7 +49,7 @@ function yith_wcbm_install_woocommerce_admin_notice() {
 function yith_wcbm_install_free_admin_notice() {
     ?>
     <div class="error">
-        <p><?php _e( 'You can\'t activate the free version of YITH WooCommerce Badges Management while you are using the premium one.', 'yit' ); ?></p>
+        <p><?php _e( 'You can\'t activate the free version of YITH WooCommerce Badge Management while you are using the premium one.', 'yit' ); ?></p>
     </div>
     <?php
 }

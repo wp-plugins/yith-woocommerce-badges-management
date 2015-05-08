@@ -3,7 +3,7 @@
  * Admin class
  *
  * @author Yithemes
- * @package YITH WooCommerce Badges Management
+ * @package YITH WooCommerce Badge Management
  * @version 1.0.0
  */
 
@@ -53,7 +53,7 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
         /**
          * @var string Premium version landing link
          */
-        protected $_premium_landing = '#';
+        protected $_premium_landing = 'https://yithemes.com/themes/plugins/yith-woocommerce-badges-management/';
 
         /**
          * @var string Quick View panel page
@@ -106,7 +106,12 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
 
             add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 
-            add_action( 'woocommerce_product_options_general_product_data', array( $this, 'badge_settings_tabs' ) );
+            //add_action( 'woocommerce_product_options_general_product_data', array( $this, 'badge_settings_tabs' ) );
+            
+            add_action('add_meta_boxes', array($this, 'badge_settings_metabox'));
+
+            // Premium Tabs
+            add_action( 'yith_wcbm_premium_tab', array( $this, 'show_premium_tab' ) );
 		 }
 
         /**
@@ -125,6 +130,9 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
         public function action_links( $links ) {
 
             $links[] = '<a href="' . admin_url( "admin.php?page={$this->_panel_page}" ) . '">' . __( 'Settings', 'yith-wcbm' ) . '</a>';
+            if ( defined( 'YITH_WCBM_FREE_INIT' ) ) {
+                $links[] = '<a href="' . $this->_premium_landing . '" target="_blank">' . __( 'Premium Version', 'ywcm' ) . '</a>';
+            }
 
             return $links;
         }
@@ -146,8 +154,8 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
          */
         public function plugin_row_meta( $plugin_meta, $plugin_file, $plugin_data, $status ) {
 
-            if ( defined( 'YITH_WCBM_FREE_INIT' ) && YITH_WCBM_FREE_INIT == $plugin_file ) {
-                //$plugin_meta[] = '<a href="' . $this->doc_url . '" target="_blank">' . __( 'Plugin Documentation', 'yith-wcbm' ) . '</a>';
+            if ( ( defined( 'YITH_WCBM_FREE_INIT' ) && YITH_WCBM_FREE_INIT == $plugin_file ) || ( defined( 'YITH_WCBM_INIT' ) && YITH_WCBM_INIT == $plugin_file ) ) {
+                $plugin_meta[] = '<a href="' . $this->doc_url . '" target="_blank">' . __( 'Plugin Documentation', 'yith-wcbm' ) . '</a>';
             }
             return $plugin_meta;
         }
@@ -167,25 +175,18 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
                 return;
             }
 
-            $admin_tabs = array(
-                'settings'      => __( 'Settings', 'yith-wcbm' )
+            $admin_tabs_free = array(
+                'settings'      => __( 'Settings', 'yith-wcbm' ),
+                'premium'       => __( 'Premium Version', 'yith-wcbm' )
                 );
 
-
-            if ( defined( 'YITH_WCBM_FREE_INIT' ) ) {
-                //$admin_tabs['premium'] = __( 'Premium Version', 'yith-wcbm' );
-            }
-
-            if ( defined( 'YITH_WCBM_PREMIUM' ) ) {
-                $admin_tabs['advanced'] = __( 'Advanced Options', 'yith-wcbm' );
-                $admin_tabs['category'] = __( 'Category Badges', 'yith-wcbm' );
-            }
+            $admin_tabs = apply_filters('yith_wcbm_settings_admin_tabs', $admin_tabs_free);
 
             $args = array(
                 'create_menu_page' => true,
                 'parent_slug'      => '',
-                'page_title'       => __( 'Badges Management', 'yith-wcbm' ),
-                'menu_title'       => __( 'Badges Management', 'yith-wcbm' ),
+                'page_title'       => __( 'Badge Management', 'yith-wcbm' ),
+                'menu_title'       => __( 'Badge Management', 'yith-wcbm' ),
                 'capability'       => 'manage_options',
                 'parent'           => '',
                 'parent_page'      => 'yit_plugin_panel',
@@ -204,18 +205,19 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
         }
 
         public function admin_enqueue_scripts() {
-            wp_enqueue_style( 'admin_init', YITH_WCBM_ASSETS_URL . '/css/yith_wcbm_admin.css');
+            wp_enqueue_style( 'admin_init', YITH_WCBM_ASSETS_URL . '/css/admin.css');
             wp_enqueue_style('wp-color-picker');
             wp_enqueue_script('wp-color-picker');
-
-            $screen = get_current_screen();
+            wp_enqueue_script('jquery-ui-tabs');
+            wp_enqueue_style('jquery-ui-style-css', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css');
+            wp_enqueue_style('googleFontsOpenSans', 'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300');
+            
+            $screen     = get_current_screen();
+            $metabox_js = defined( 'YITH_WCBM_PREMIUM' ) ? 'metabox_options_premium.js' : 'metabox_options.js';
 
             if( 'yith-wcbm-badge' == $screen->id  ) {
-                if ( defined( 'YITH_WCBM_PREMIUM' ) ) {
-                    wp_enqueue_script( 'yith_wcbm_metabox_options', YITH_WCBM_ASSETS_URL .'/js/metabox_options_premium.js', array('jquery', 'wp-color-picker'), '1.0.0', true );
-                }else{
-                    wp_enqueue_script( 'yith_wcbm_metabox_options', YITH_WCBM_ASSETS_URL .'/js/metabox_options.js', array('jquery', 'wp-color-picker'), '1.0.0', true );
-                }
+                wp_enqueue_script( 'yith_wcbm_metabox_options', YITH_WCBM_ASSETS_URL .'/js/' . $metabox_js, array('jquery', 'wp-color-picker'), '1.0.0', true );
+                wp_localize_script( 'yith_wcbm_metabox_options', 'ajax_object', array( 'assets_url' => YITH_WCBM_ASSETS_URL , 'wp_ajax_url' => admin_url( 'admin-ajax.php' )) );
             }
         }
 
@@ -266,7 +268,7 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
             $bm_meta = get_post_meta( $post->ID, '_badge_meta', true);
 
             $default = array(
-                'type'                          => 'custom',
+                'type'                          => 'text',
                 'text'                          => '', 
                 'txt_color_default'             => '#000000', 
                 'txt_color'                     => '#000000', 
@@ -300,8 +302,11 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
         }
 
 
+        function badge_settings_metabox() {
+            add_meta_box('yith-wcbm-badge_metabox',__('Product Badge', 'yith-wcbm'), array($this, 'badge_settings_tabs'), 'product', 'side', 'core');
+        }
         /**
-         * Add badge select In WC General Tab options metabox
+         * Add badge select in metabox
          *
          * @return   void
          * @since    1.0
@@ -340,6 +345,8 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
 
             <?php
         }
+
+
         public function badge_settings_save( $post_id ){
            if ( !empty( $_POST[ '_yith_wcbm_product_meta' ] ) ){
                 $product_meta['id_badge'] = ( !empty( $_POST[ '_yith_wcbm_product_meta' ]['id_badge'] ) ) ? $_POST[ '_yith_wcbm_product_meta' ]['id_badge'] : '';
@@ -347,8 +354,28 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
             }
         }
 
+         /**
+         * Show premium landing tab
+         *
+         * @return   void
+         * @since    1.0
+         * @author   Andrea Grillo <andrea.grillo@yithemes.com>
+         */
+        public function show_premium_tab(){
+            $landing = YITH_WCBM_TEMPLATE_PATH . '/premium.php';
+            file_exists( $landing ) && require( $landing );
+        }
 
-
+        /**
+		 * Get the premium landing uri
+		 *
+		 * @since   1.0.0
+		 * @author  Andrea Grillo <andrea.grillo@yithemes.com>
+		 * @return  string The premium landing link
+		 */
+		public function get_premium_landing_uri() {
+			return defined( 'YITH_REFER_ID' ) ? $this->_premium_landing . '?refer_id=' . YITH_REFER_ID : $this->_premium_landing . '?refer_id=1030585';
+		}
     }
 }
 

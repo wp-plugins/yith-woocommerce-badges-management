@@ -1,10 +1,10 @@
 === YITH WooCommerce Badge Management ===
 
-Contributors: yithemes
-Tags: badges, badge, woocommerce, products, themes, yit, e-commerce, shop, yith, badge management, premium, yithemes
-Requires at least: 3.5.1
-Tested up to: 4.1.1
-Stable tag: 1.0.0
+Contributors: YIThemes
+Tags: badges, badge, woocommerce, products, themes, yit, e-commerce, shop, yith, badges management, premium, yithemes, product badge, global badge, category badge, woocommerce badge
+Requires at least: 3.9
+Tested up to: 4.2.2
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,13 +36,21 @@ YITH WooCommerce Badge Management will add a new submenu called "Badge Managemen
 2. Admin: Add new custom badge
 3. Admin: Add new image badge
 4. Admin: Add badge to product 
-5. Frontend: The shop page
+5. Frontend: Shop page
 6. Frontend: Single product page example 1
 7. Frontend: Single product page example 2
 8. Frontend: Single product page example 3
 9. Frontend: Single product page example 4
 
 == Changelog ==
+
+= 1.1.0 =
+
+* Added: Support to WordPress 4.2.2
+* Added: Support to WooCommerce 2.3.8
+* Updated: Default language file
+* Fixed: Duplicate product image in shop loop
+* Fixed: Minor bugs
 
 = 1.0.0 =
 
@@ -57,8 +65,6 @@ If you have suggestions about how to improve YITH WooCommerce Badge Management, 
 = Available Languages =
 * English (Default)
 
-If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
-[use](http://yithemes.com/contact "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Badge Management Languages
 
 == Upgrade notice ==
 
