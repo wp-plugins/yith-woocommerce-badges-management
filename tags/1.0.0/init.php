@@ -4,7 +4,7 @@
 * Plugin URI: http://yithemes.com/
 * Description: YITH WooCommerce Badges Management allows you to create custom badge for every product.
 * Version: 1.0.0
-* Author: YIThemes
+* Author: yithemes
 * Author URI: http://yithemes.com/
 * Text Domain: yith-wcbm
 * Domain Path: /languages/
