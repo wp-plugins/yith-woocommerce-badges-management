@@ -1,6 +1,6 @@
 === YITH WooCommerce Badge Management ===
 
-Contributors: YIThemes
+Contributors: yithemes
 Tags: badges, badge, woocommerce, products, themes, yit, e-commerce, shop, yith, badges management, premium, yithemes, product badge, global badge, category badge, woocommerce badge
 Requires at least: 3.9
 Tested up to: 4.2.2
