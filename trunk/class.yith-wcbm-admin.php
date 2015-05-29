@@ -205,7 +205,7 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
         }
 
         public function admin_enqueue_scripts() {
-            wp_enqueue_style( 'admin_init', YITH_WCBM_ASSETS_URL . '/css/admin.css');
+            wp_enqueue_style( 'yith_wcbm_admin_style', YITH_WCBM_ASSETS_URL . '/css/admin.css');
             wp_enqueue_style('wp-color-picker');
             wp_enqueue_script('wp-color-picker');
             wp_enqueue_script('jquery-ui-tabs');
@@ -244,7 +244,8 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
                 'labels'                    => $labels,
                 'public'                    => true,
                 'show_ui'                   => true,
-                'exclude_from_search'       => true,
+                'menu_position'             => 10,
+                'exclude_from_search'     => true,
                 'capability_type'           => 'post',
                 'map_meta_cap'              => true,
                 'rewrite'                   => true,
