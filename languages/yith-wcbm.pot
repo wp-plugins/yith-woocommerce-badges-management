@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Badge Management\n"
 "Report-Msgid-Bugs-To: Your Inspiration Themes <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2015-05-08 14:00+0100\n"
-"PO-Revision-Date: 2015-05-08 14:00+0100\n"
+"POT-Creation-Date: 2015-05-29 09:51+0100\n"
+"PO-Revision-Date: 2015-05-29 09:51+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <info@yithemes.com>\n"
 "Language: en\n"
@@ -73,19 +73,19 @@ msgstr ""
 msgid "Badge not found in trash"
 msgstr ""
 
-#: class.yith-wcbm-admin.php:264
+#: class.yith-wcbm-admin.php:263
 msgid "Badge Options"
 msgstr ""
 
-#: class.yith-wcbm-admin.php:306
+#: class.yith-wcbm-admin.php:305
 msgid "Product Badge"
 msgstr ""
 
-#: class.yith-wcbm-admin.php:324
+#: class.yith-wcbm-admin.php:323
 msgid "Select Badge"
 msgstr ""
 
-#: class.yith-wcbm-admin.php:326
+#: class.yith-wcbm-admin.php:325
 msgid "none"
 msgstr ""
 
@@ -552,11 +552,13 @@ msgstr ""
 
 #: plugin-fw/licence/lib/yit-licence.php:161
 #, php-format
-msgid "%field% field cannot be empty"
+msgctxt "%s = field name"
+msgid "%s field cannot be empty"
 msgstr ""
 
 #: plugin-fw/licence/lib/yit-licence.php:162
-msgid "%field_1% and %field_2% fields cannot be empty"
+#, php-format
+msgid "%s and %s fields cannot be empty"
 msgstr ""
 
 #: plugin-fw/licence/lib/yit-licence.php:163
@@ -595,8 +597,8 @@ msgstr ""
 msgid "Licence key has been banned"
 msgstr ""
 
-#: plugin-fw/licence/lib/yit-plugin-licence.php:64
-#: plugin-fw/licence/lib/yit-plugin-licence.php:65
+#: plugin-fw/licence/lib/yit-plugin-licence.php:68
+#: plugin-fw/licence/lib/yit-plugin-licence.php:69
 #: plugin-fw/licence/lib/yit-theme-licence.php:64
 #: plugin-fw/licence/lib/yit-theme-licence.php:65
 #: plugin-fw/licence/lib/yit-theme-licence.php:107
@@ -780,7 +782,7 @@ msgstr ""
 
 #: plugin-fw/templates/metaboxes/types/contactform.php:77
 #: plugin-fw/templates/metaboxes/types/contactform.php:269
-msgid "Title Field"
+msgid "Field Title"
 msgstr ""
 
 #: plugin-fw/templates/metaboxes/types/contactform.php:81
@@ -802,7 +804,7 @@ msgstr ""
 
 #: plugin-fw/templates/metaboxes/types/contactform.php:95
 #: plugin-fw/templates/metaboxes/types/contactform.php:287
-msgid "Type field"
+msgid "Field Type"
 msgstr ""
 
 #: plugin-fw/templates/metaboxes/types/contactform.php:103
