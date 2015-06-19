@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Badge Management\n"
 "Report-Msgid-Bugs-To: Your Inspiration Themes <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2015-05-29 09:51+0100\n"
-"PO-Revision-Date: 2015-05-29 09:51+0100\n"
+"POT-Creation-Date: 2015-06-19 17:17+0100\n"
+"PO-Revision-Date: 2015-06-19 17:17+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <info@yithemes.com>\n"
 "Language: en\n"
@@ -73,19 +73,19 @@ msgstr ""
 msgid "Badge not found in trash"
 msgstr ""
 
-#: class.yith-wcbm-admin.php:263
+#: class.yith-wcbm-admin.php:264
 msgid "Badge Options"
 msgstr ""
 
-#: class.yith-wcbm-admin.php:305
+#: class.yith-wcbm-admin.php:306
 msgid "Product Badge"
 msgstr ""
 
-#: class.yith-wcbm-admin.php:323
+#: class.yith-wcbm-admin.php:324
 msgid "Select Badge"
 msgstr ""
 
-#: class.yith-wcbm-admin.php:325
+#: class.yith-wcbm-admin.php:326
 msgid "none"
 msgstr ""
 
@@ -371,70 +371,70 @@ msgstr ""
 msgid "Plugin Settings"
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:95 plugin-fw/lib/yit-plugin-subpanel.php:101
+#: plugin-fw/lib/yit-plugin-panel.php:96 plugin-fw/lib/yit-plugin-subpanel.php:101
 msgid "YIT Plugins"
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:292 plugin-fw/lib/yit-plugin-subpanel.php:142
+#: plugin-fw/lib/yit-plugin-panel.php:293 plugin-fw/lib/yit-plugin-subpanel.php:143
 #: plugin-fw/templates/panel/woocommerce/woocommerce-form.php:5
 msgid "Save Changes"
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:295
+#: plugin-fw/lib/yit-plugin-panel.php:296
 #: plugin-fw/templates/panel/woocommerce/woocommerce-form.php:8
 msgid "If you continue with this action, you will reset all options in this page."
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:297 plugin-fw/lib/yit-plugin-subpanel.php:147
+#: plugin-fw/lib/yit-plugin-panel.php:298 plugin-fw/lib/yit-plugin-subpanel.php:148
 msgid "Reset to Default"
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:297 plugin-fw/lib/yit-plugin-subpanel.php:147
+#: plugin-fw/lib/yit-plugin-panel.php:298 plugin-fw/lib/yit-plugin-subpanel.php:148
 #: plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
 msgid "Are you sure?"
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:431
+#: plugin-fw/lib/yit-plugin-panel.php:432
 msgid "The element you have entered already exists. Please, enter another name."
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:432
+#: plugin-fw/lib/yit-plugin-panel.php:433
 msgid "Settings saved"
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:433
+#: plugin-fw/lib/yit-plugin-panel.php:434
 msgid "Settings reset"
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:434
+#: plugin-fw/lib/yit-plugin-panel.php:435
 msgid "Element deleted correctly."
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:435 plugin-fw/lib/yit-plugin-panel.php:436
+#: plugin-fw/lib/yit-plugin-panel.php:436 plugin-fw/lib/yit-plugin-panel.php:437
 msgid "Element updated correctly."
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:437
+#: plugin-fw/lib/yit-plugin-panel.php:438
 msgid "Database imported correctly."
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:438
+#: plugin-fw/lib/yit-plugin-panel.php:439
 msgid "An error has occurred during import. Please try again."
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:439
+#: plugin-fw/lib/yit-plugin-panel.php:440
 msgid "The added file is not valid."
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:440
+#: plugin-fw/lib/yit-plugin-panel.php:441
 msgid "Sorry, import is disabled."
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-panel.php:441
+#: plugin-fw/lib/yit-plugin-panel.php:442
 msgid "Sorting successful."
 msgstr ""
 
-#: plugin-fw/lib/yit-plugin-subpanel.php:145
+#: plugin-fw/lib/yit-plugin-subpanel.php:146
 msgid ""
 "If you continue with this action, you will reset all the options in this page."
 msgstr ""
