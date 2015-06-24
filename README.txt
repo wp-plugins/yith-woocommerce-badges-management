@@ -1,6 +1,6 @@
 === YITH WooCommerce Badge Management ===
 
-Contributors: YIThemes
+Contributors: yithemes
 Tags: badges, badge, woocommerce, products, themes, yit, e-commerce, shop, yith, badges management, premium, yithemes, product badge, global badge, category badge, woocommerce badge
 Requires at least: 4.0
 Tested up to: 4.2.2
@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 YITH WooCommerce Badge Management allows you to create and manage custom badges for products.
 
 
-== Description ==
+== Description == 
 
 Make your website more attractive with badges inviting customers to buy. It is not just a matter of appearance, it has been proved to increase sales up to 55%. Badges are an interesting tool, because they act on users' mind as spotlights that draw their attention upon a specific product, a specific offer, or attract them and make their interest higher and their will to purchase increases. Try YIThemes badges, highly customisable, in colour, text and position. Yet, a suggestion: do not exaggerate! A different badge for each product is like putting none upon them.
 
