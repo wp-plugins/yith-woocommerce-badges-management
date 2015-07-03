@@ -72,9 +72,8 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
 
             // POST Thumbnail [to add custom badge in shop page]
             add_filter('post_thumbnail_html', array($this, 'add_box_thumb'));
-            add_action('woocommerce_before_shop_loop_item', array($this, 'add_variable_prod'));
-            add_action('woocommerce_before_shop_loop_item_title', array($this, 'add_variable_prod'));
-
+            add_action('woocommerce_before_shop_loop', array($this, 'add_variable_prod'));
+            add_action('dynamic_sidebar', array($this, 'remove_variable_prod'));
        }
 
         public function add_box_thumb( $thumb ){
@@ -88,6 +87,10 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
 
         public function add_variable_prod(){
             $this->this_is_product = 1;
+        }
+
+        public function remove_variable_prod(){
+            unset($this->this_is_product);
         }
 
         /**
