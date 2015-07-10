@@ -37,7 +37,7 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
         public $version = YITH_WCBM_VERSION;
 
 
-        public $this_is_product = NULL;
+        private $is_in_sidebar = false;
 
         /**
          * Returns single instance of the class
@@ -72,25 +72,42 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
 
             // POST Thumbnail [to add custom badge in shop page]
             add_filter('post_thumbnail_html', array($this, 'add_box_thumb'));
-            add_action('woocommerce_before_shop_loop', array($this, 'add_variable_prod'));
-            add_action('dynamic_sidebar', array($this, 'remove_variable_prod'));
+            
+            // action to set this->is_in_sidebar
+            add_action('dynamic_sidebar_before', array($this, 'set_is_in_sidebar'), true);
+            add_action('dynamic_sidebar_after', array($this, 'set_is_in_sidebar'), false);
        }
 
         public function add_box_thumb( $thumb ){
-            if(isset($this->this_is_product)){
+            if( ! $this->is_in_sidebar() ){
                 return self::show_badge_on_product($thumb);
-                unset($this->this_is_product);
             }else{
                 return $thumb;
             }
         }
 
-        public function add_variable_prod(){
-            $this->this_is_product = 1;
+        /**
+         * Set this->is in sidebar
+         *
+         * @access public
+         * @param $value bool
+         * @since  1.1.4
+         * @author Leanza Francesco <leanzafrancesco@gmail.com>
+         */
+        public function set_is_in_sidebar( $value = false ){
+            $this->is_in_sidebar = $value;
         }
 
-        public function remove_variable_prod(){
-            unset($this->this_is_product);
+        /**
+         * Return true if is in sidebar
+         *
+         * @access public
+         * @return bool
+         * @since  1.1.4
+         * @author Leanza Francesco <leanzafrancesco@gmail.com>
+         */
+        public function is_in_sidebar(){
+            return $this->is_in_sidebar;
         }
 
         /**
