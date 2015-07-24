@@ -62,40 +62,50 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
         public function __construct() {
             
             // Action to add custom badge in single product page
-            add_filter('woocommerce_single_product_image_html',array( $this, 'show_badge_on_product' ));
+            add_filter('woocommerce_single_product_image_html',array( $this, 'show_badge_on_product' ) , 10 , 2);
             
             // add frontend css
             add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
 
             // edit sale flash badge
-            add_filter('woocommerce_sale_flash', array($this, 'sale_flash'));
+            add_filter('woocommerce_sale_flash', array($this, 'sale_flash') , 10 , 2 );
 
             // POST Thumbnail [to add custom badge in shop page]
-            add_filter('post_thumbnail_html', array($this, 'add_box_thumb'));
+            add_filter('post_thumbnail_html', array($this, 'add_box_thumb') , 10 , 2);
             
             // action to set this->is_in_sidebar
-            add_action('dynamic_sidebar_before', array($this, 'set_is_in_sidebar'), true);
-            add_action('dynamic_sidebar_after', array($this, 'set_is_in_sidebar'), false);
+            add_action('dynamic_sidebar_before', array($this, 'set_is_in_sidebar') );
+            add_action('dynamic_sidebar_after', array($this, 'unset_is_in_sidebar') );
        }
 
-        public function add_box_thumb( $thumb ){
+        public function add_box_thumb( $thumb , $post_id ){
             if( ! $this->is_in_sidebar() ){
-                return self::show_badge_on_product($thumb);
+                return self::show_badge_on_product($thumb , $post_id);
             }else{
                 return $thumb;
             }
         }
 
         /**
-         * Set this->is in sidebar
+         * Set this->is in sidebar to true
          *
          * @access public
-         * @param $value bool
          * @since  1.1.4
          * @author Leanza Francesco <leanzafrancesco@gmail.com>
          */
-        public function set_is_in_sidebar( $value = false ){
-            $this->is_in_sidebar = $value;
+        public function set_is_in_sidebar(){
+            $this->is_in_sidebar = true;
+        }
+
+        /**
+         * Set this->is in sidebar to false
+         *
+         * @access public
+         * @since  1.1.4
+         * @author Leanza Francesco <leanzafrancesco@gmail.com>
+         */
+        public function unset_is_in_sidebar(){
+            $this->is_in_sidebar = false;
         }
 
         /**
@@ -119,11 +129,13 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
          * @since  1.0.0
          * @author Leanza Francesco <leanzafrancesco@gmail.com>
          */
-        public function sale_flash($val){
+        public function sale_flash( $val , $post ){
             $hide_on_sale_default = get_option( 'yith-wcbm-hide-on-sale-default' ) == 'yes' ? true : false;
-            
-            global $post;
+
             $product_id = $post->ID;
+
+            $product_id = $this->getWpmlParentId( $product_id );
+
             $bm_meta = get_post_meta( $product_id, '_yith_wcbm_product_meta', true);
             $id_badge = ( isset( $bm_meta[ 'id_badge' ] ) ) ? $bm_meta[ 'id_badge' ] : ''; 
 
@@ -142,13 +154,12 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
          * @since  1.0.0
          * @author Leanza Francesco <leanzafrancesco@gmail.com>
          */
-        public function show_badge_on_product ( $val ) {
+        public function show_badge_on_product ( $val , $product_id ) {
             $badge_container = "<div class='container-image-and-badge'>". $val;
 
-            global $post;
+            $product_id = $this->getWpmlParentId( $product_id );
 
-            $product_id = $post->ID;
-            $bm_meta = get_post_meta( $post->ID, '_yith_wcbm_product_meta', true);
+            $bm_meta = get_post_meta( $product_id , '_yith_wcbm_product_meta', true);
             $id_badge = ( isset( $bm_meta[ 'id_badge' ] ) ) ? $bm_meta[ 'id_badge' ] : ''; 
             if( ! defined( 'YITH_WCBM_PREMIUM' )){
                 $badge_container .= yith_wcbm_get_badge($id_badge, $product_id);
@@ -163,6 +174,27 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
         public function enqueue_scripts(){
             wp_enqueue_style( 'yith_wcbm_badge_style', YITH_WCBM_ASSETS_URL . '/css/frontend.css');
             wp_enqueue_style('googleFontsOpenSans', 'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300');
+        }
+
+        public function getWpmlParentId( $product_id ) {
+
+            global $sitepress;
+            if ( isset( $sitepress ) ) {
+
+                $default_language = $sitepress->get_default_language();
+
+                if ( function_exists( 'icl_object_id' ) ) {
+                    $product_id = icl_object_id( $product_id, 'product', true, $default_language );
+                }
+                else {
+                    if ( function_exists( 'wpml_object_id_filter' ) ) {
+                        $product_id = wpml_object_id_filter( $product_id, 'product', true, $default_language );
+                    }
+                }
+
+            }
+
+            return $product_id;
         }
     }
 }

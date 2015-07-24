@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: badges, badge, woocommerce, products, themes, yit, e-commerce, shop, yith, badges management, premium, yithemes, product badge, global badge, category badge, woocommerce badge
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,12 @@ YITH WooCommerce Badge Management will add a new submenu called "Badge Managemen
 9. Frontend: Single product page example 4
 
 == Changelog ==
+
+= 1.1.5 =
+
+* Added: WPML Compatibility
+* Added: Compatibility with more themes
+* Fixed: Bug with widget sidebar on header
 
 = 1.1.4 =
 

@@ -9,6 +9,15 @@ if ($position == 'top-left'){
 }else if ($position == 'bottom-right'){
     $position_css = "bottom: 0; right: 0;";
 }
+
+//--wpml-------------
+global $sitepress;
+
+if ( isset( $sitepress ) ) {
+    $text = icl_t( 'yith-wcbm', sanitize_title( $text ), $text );
+}
+//-------------------
+
 ?>
 <style>
     .yith-wcbm-badge-<?php echo $product_id ?>-<?php echo $id_badge ?>{
