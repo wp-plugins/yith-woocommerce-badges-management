@@ -11,11 +11,7 @@ if ($position == 'top-left'){
 }
 
 //--wpml-------------
-global $sitepress;
-
-if ( isset( $sitepress ) ) {
-    $text = icl_t( 'yith-wcbm', sanitize_title( $text ), $text );
-}
+$text = yith_wcbm_wpml_string_translate( 'yith-wcbm', sanitize_title( $text ), $text );
 //-------------------
 
 ?>

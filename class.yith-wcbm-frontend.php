@@ -134,7 +134,7 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
 
             $product_id = $post->ID;
 
-            $product_id = $this->getWpmlParentId( $product_id );
+            $product_id = $this->get_wpml_parent_id( $product_id );
 
             $bm_meta = get_post_meta( $product_id, '_yith_wcbm_product_meta', true);
             $id_badge = ( isset( $bm_meta[ 'id_badge' ] ) ) ? $bm_meta[ 'id_badge' ] : ''; 
@@ -157,7 +157,7 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
         public function show_badge_on_product ( $val , $product_id ) {
             $badge_container = "<div class='container-image-and-badge'>". $val;
 
-            $product_id = $this->getWpmlParentId( $product_id );
+            $product_id = $this->get_wpml_parent_id( $product_id );
 
             $bm_meta = get_post_meta( $product_id , '_yith_wcbm_product_meta', true);
             $id_badge = ( isset( $bm_meta[ 'id_badge' ] ) ) ? $bm_meta[ 'id_badge' ] : ''; 
@@ -176,7 +176,7 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
             wp_enqueue_style('googleFontsOpenSans', 'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300');
         }
 
-        public function getWpmlParentId( $product_id ) {
+        public function get_wpml_parent_id( $product_id ) {
 
             global $sitepress;
             if ( isset( $sitepress ) ) {

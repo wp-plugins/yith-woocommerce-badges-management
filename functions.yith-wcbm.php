@@ -203,5 +203,40 @@ if ( ! function_exists( 'yith_wcbm_get_template' ) ) {
 }
 
 
+if ( ! function_exists( 'yith_wcbm_wpml_register_string' ) ) {
+    /**
+     * Register a string in wpml trnslation
+     *
+     * @param string
+     * @param string
+     * @param string
+     *
+     * @since  2.0.0
+     * @author Andrea Frascaspata <andrea.frascaspata@yithemes.com>
+     */
+    function yith_wcbm_wpml_register_string( $context , $name , $value  ) {
+        // wpml string translation
+        do_action( 'wpml_register_single_string', $context, $name, $value );
+    }
+}
+
+if ( ! function_exists( 'yith_wcbm_wpml_string_translate' ) ) {
+    /**
+     * Get a string translation
+     *
+     * @param string
+     * @param string
+     * @param string
+     *
+     * @return string the string translated
+     * @since  2.0.0
+     * @author Andrea Frascaspata <andrea.frascaspata@yithemes.com>
+     */
+    function yith_wcbm_wpml_string_translate( $context, $name, $default_value ) {
+        return apply_filters( 'wpml_translate_single_string', $default_value, $context, $name );
+    }
+}
+
+
 
 ?>

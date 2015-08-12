@@ -3,7 +3,7 @@
 * Plugin Name: YITH WooCommerce Badge Management
 * Plugin URI: http://yithemes.com/
 * Description: YITH WooCommerce Badge Management allows you to create custom badge for every product.
-* Version: 1.1.5
+* Version: 1.1.6
 * Author: YIThemes
 * Author URI: http://yithemes.com/
 * Text Domain: yith-wcbm
@@ -11,7 +11,7 @@
 *
 * @author Yithemes
 * @package YITH WooCommerce Badge Management
-* @version 1.1.5
+* @version 1.1.6
 */
 /*  Copyright 2015  Your Inspiration Themes  (email : plugins@yithemes.com)
 
@@ -61,7 +61,7 @@ register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 
 
 if ( ! defined( 'YITH_WCBM_VERSION' ) ){
-    define( 'YITH_WCBM_VERSION', '1.1.5' );
+    define( 'YITH_WCBM_VERSION', '1.1.6' );
 }
 
 if ( ! defined( 'YITH_WCBM_FREE_INIT' ) ) {

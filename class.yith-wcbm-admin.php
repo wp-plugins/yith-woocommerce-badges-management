@@ -299,11 +299,7 @@ if( !class_exists( 'YITH_WCBM_Admin' ) ) {
                 $badge_meta['image_url'] = ( !empty( $_POST[ '_badge_meta' ]['image_url'] ) ) ? $_POST[ '_badge_meta' ]['image_url'] : '';
 
                 //--wpml-------------
-                global $sitepress;
-
-                if ( isset( $sitepress ) ) {
-                    icl_register_string( 'yith-wcbm', sanitize_title( $badge_meta['text'] ), $badge_meta['text'] );
-                }
+                yith_wcbm_wpml_register_string( 'yith-wcbm' , sanitize_title( $badge_meta['text'] ) , $badge_meta['text'] );
                 //-------------------
 
                 update_post_meta( $post_id, '_badge_meta', $badge_meta );
