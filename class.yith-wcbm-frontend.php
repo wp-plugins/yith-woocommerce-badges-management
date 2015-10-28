@@ -79,7 +79,7 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
        }
 
         public function add_box_thumb( $thumb , $post_id ){
-            if( ! $this->is_in_sidebar() ){
+            if( ! $this->is_in_sidebar() && !is_cart() && !is_checkout() ){
                 return self::show_badge_on_product($thumb , $post_id);
             }else{
                 return $thumb;
@@ -125,7 +125,7 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
          *
          * @access public
          * @return string
-         * @param $val value of filter woocommerce_sale_flash
+         * @param $val string value of filter woocommerce_sale_flash
          * @since  1.0.0
          * @author Leanza Francesco <leanzafrancesco@gmail.com>
          */
@@ -149,12 +149,16 @@ if( ! class_exists( 'YITH_WCBM_Frontend' ) ) {
          * Edit image in products
          *
          * @access public
-         * @return void
-         * @param $val product image
+         * @return string
+         * @param $val string product image
          * @since  1.0.0
          * @author Leanza Francesco <leanzafrancesco@gmail.com>
          */
         public function show_badge_on_product ( $val , $product_id ) {
+            // prevent multiple badge copies
+            if( strpos($val, 'container-image-and-badge') > 0)
+                return $val;
+
             $badge_container = "<div class='container-image-and-badge'>". $val;
 
             $product_id = $this->get_wpml_parent_id( $product_id );
