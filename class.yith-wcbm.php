@@ -70,7 +70,7 @@ if ( !class_exists( 'YITH_WCBM' ) ) {
             add_action( 'plugins_loaded', array( $this, 'plugin_fw_loader' ), 15 );
 
             // Class admin
-            if ( is_admin() ) {
+            if ( is_admin() && ( ! isset( $_REQUEST['action'] ) || ( isset( $_REQUEST['action'] ) && $_REQUEST['action'] != 'yith_load_product_quick_view' ) ) ) {
                 YITH_WCBM_Admin();
             } // Class frontend
             else {

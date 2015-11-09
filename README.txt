@@ -44,6 +44,10 @@ YITH WooCommerce Badge Management will add a new submenu called "Badge Managemen
 
 == Changelog ==
 
+= 1.2.2 =
+
+* Added: Compatibility with more themes
+
 = 1.2.1 =
 
 * Fixed: minor bug

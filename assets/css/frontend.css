@@ -6,29 +6,32 @@
  */
 
 .yith-wcbm-badge {
-	position: absolute;
-	box-sizing: border-box;
-	text-align: center;
-	z-index:10;
+    position   : absolute;
+    box-sizing : border-box;
+    text-align : center;
+    z-index    : 10;
 }
-.yith-wcbm-badge img{
-	max-width: 200px;
-	max-height: 200px;
+
+.yith-wcbm-badge img {
+    max-width  : 200px;
+    max-height : 200px;
 }
+
 p.yith-wcbm-badge-txt {
-	margin: 0;
-	padding: 0;
+    margin  : 0;
+    padding : 0;
 }
 
-.container-image-and-badge{
-	position:relative;
-	display:block;
+.container-image-and-badge {
+    position    : relative;
+    display     : block;
+    text-indent : 0;
 }
 
-.yith-wcbm-badge img{
-	margin: 0 !important;
+.yith-wcbm-badge img {
+    margin : 0 !important;
 }
 
-span.onsale{
-	z-index:10;
+span.onsale {
+    z-index : 10;
 }
